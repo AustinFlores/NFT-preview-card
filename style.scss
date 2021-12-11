@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$font-family: "Outfit", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 88%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  border-radius: 1rem;
+  .container {
+    width: 88%;
+    margin-inline: auto;
+    padding-block: 1.5rem;
+
+    h1:hover,
+    span:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+    .description {
+      margin-block: 1rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: white;
+      font-size: 1.5rem;
+      margin-block: 1.2rem;
+    }
+    h2 {
+      color: hsl(178, 100%, 50%);
+      font-size: 18px;
+      margin-left: 0.5em;
+    }
+    p {
+      color: hsl(215, 51%, 70%);
+      font-size: 18px;
+    }
+    .price-flex {
+      display: flex;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+      .push-right {
+        margin-left: auto;
+      }
+      p {
+        margin-left: 0.5em;
+      }
+      img {
+        align-self: center;
+      }
+    }
+    .main-img {
+      width: 100%;
+      border-radius: 0.7rem;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+      .view {
+        position: absolute;
+        width: 20%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: none;
+      }
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: hsla(178, 100%, 50%, 0.5);
+          background-size: cover;
+        }
+        .view {
+          display: flex;
+        }
+      }
+    }
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    img {
+      width: 14%;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+    span {
+      color: white;
+    }
+  }
+}
+
+.attribution {
+  width: 85%;
+  margin-inline: auto;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .card {
+    width: 27%;
+    margin-block: 5rem;
+  }
+}

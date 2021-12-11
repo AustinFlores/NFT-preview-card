@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d192b;
+}
+
+.card {
+  background-color: #14253d;
+  width: 88%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  border-radius: 1rem;
+}
+
+.card .container {
+  width: 88%;
+  margin-inline: auto;
+  padding-block: 1.5rem;
+}
+
+.card .container h1:hover,
+.card .container span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.card .container .description {
+  margin-block: 1rem;
+  line-height: 1.6;
+}
+
+.card .container h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-block: 1.2rem;
+}
+
+.card .container h2 {
+  color: #00fff7;
+  font-size: 18px;
+  margin-left: 0.5em;
+}
+
+.card .container p {
+  color: #8bacda;
+  font-size: 18px;
+}
+
+.card .container .price-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2f415b;
+}
+
+.card .container .price-flex .push-right {
+  margin-left: auto;
+}
+
+.card .container .price-flex p {
+  margin-left: 0.5em;
+}
+
+.card .container .price-flex img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card .container .main-img {
+  width: 100%;
+  border-radius: 0.7rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card .container .main-img img {
+  width: 100%;
+}
+
+.card .container .main-img .view {
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+}
+
+.card .container .main-img:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.5);
+  background-size: cover;
+}
+
+.card .container .main-img:hover .view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.card .author img {
+  width: 14%;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.card .author span {
+  color: white;
+}
+
+.attribution {
+  width: 85%;
+  margin-inline: auto;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .card {
+    width: 27%;
+    margin-block: 5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
